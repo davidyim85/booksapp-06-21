@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="/books">Back to the book list page</a>
+    </nav>
+
+    <h1><%=book.title%></h1>
+    <p>Author: <%=book.author%></p>
+    <p>Completed: <%=book.completed%></p>
+
+
+    <form method="POST" action="/books/<%=book._id%>?_method=DELETE">
+        <input type="submit" value="delete book"/>
+    </form>
+
+    <a href="/books/<%=book._id%>/edit"> 
+        <button>edit</button>
+    </a>
+</body>
+</html>
